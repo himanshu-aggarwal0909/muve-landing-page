@@ -1,5 +1,6 @@
 import { Mail, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
+import { getImagePath } from "@/lib/utils"
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img
-                src="/images/muve_logo_blacck.png"
+                src={getImagePath("/images/muve_logo_blacck.png")}
                 alt="MUVE by One Health Balance"
                 className="h-10 w-auto"
               />

@@ -1,3 +1,5 @@
+import { getImagePath } from "@/lib/utils"
+
 export default function AITracking() {
   return (
     <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-primary/10 to-white">
@@ -7,7 +9,7 @@ export default function AITracking() {
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-primary/20">
               <div className="overflow-hidden" style={{ maxHeight: '98%' }}>
                 <img
-                  src="/images/Gemini_Generated_Image_8r53s08r53s08r53.png"
+                  src={getImagePath("/images/Gemini_Generated_Image_8r53s08r53s08r53.png")}
                   alt="Smart Sensors"
                   className="w-full h-auto object-cover"
                   style={{ objectPosition: 'center top', transform: 'scale(1.05)', transformOrigin: 'center top' }}

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { getImagePath } from "@/lib/utils"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +14,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img
-              src="/images/muve_logo_blacck.png"
+              src={getImagePath("/images/muve_logo_blacck.png")}
               alt="MUVE by One Health Balance"
               className="h-12 w-auto"
             />

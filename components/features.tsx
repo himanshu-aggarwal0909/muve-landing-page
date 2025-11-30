@@ -1,34 +1,36 @@
 "use client"
 
+import { getImagePath } from "@/lib/utils"
+
 export default function Features() {
   const appFeatures = [
     {
-      image: "/images/ai-generated-workout-plan.png",
+      image: getImagePath("/images/ai-generated-workout-plan.png"),
       title: "Hyper Personalized Workout Plan Creation",
       description: "AI powered Plan Generation",
     },
     {
-      image: "/images/rep-set-tracking.png",
+      image: getImagePath("/images/rep-set-tracking.png"),
       title: "Real Time Workout Set and Rep Tracking",
       description: "Tracks rep counts, rep velocity and more",
     },
     {
-      image: "/images/workout-summary.png",
+      image: getImagePath("/images/workout-summary.png"),
       title: "Post Workout Detailed Analysis",
       description: "Complete session insights and performance breakdown",
     },
     {
-      image: "/images/exercise-details-n-stats.png",
+      image: getImagePath("/images/exercise-details-n-stats.png"),
       title: "Track PR and Performance for each exercise",
       description: "Monitor personal records and progress over time",
     },
     {
-      image: "/images/health-metric-tracking.png",
+      image: getImagePath("/images/health-metric-tracking.png"),
       title: "Track Health Metrics",
       description: "Monitor vital stats, recovery metrics, and wellness data",
     },
     {
-      image: "/images/diy-workout.png",
+      image: getImagePath("/images/diy-workout.png"),
       title: "DIY your workout plan",
       description: "Design your own workout as per your fitness goal",
     },
@@ -57,7 +59,7 @@ export default function Features() {
                 </div>
                 <div className="w-48 h-96 rounded-3xl border-[0.5px] border-black bg-black p-0.5 shadow-lg flex-shrink-0">
                   <img
-                    src={feature.image || "/placeholder.svg"}
+                    src={feature.image || getImagePath("/placeholder.svg")}
                     alt={feature.title}
                     className="w-full h-full rounded-2xl object-cover"
                   />
