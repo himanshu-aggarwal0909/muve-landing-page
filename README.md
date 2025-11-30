@@ -12,9 +12,42 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 ## Deployment
 
-Your project is live at:
+### Option 1: GitHub Pages (Free Static Hosting)
+
+Your project is configured for GitHub Pages deployment. Follow these steps:
+
+1. **Push your code to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Configure for GitHub Pages"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages in your repository:**
+   - Go to your repository on GitHub
+   - Click on **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+3. **Automatic Deployment:**
+   - The GitHub Actions workflow will automatically build and deploy your site
+   - Every push to the `main` branch will trigger a new deployment
+   - Your site will be available at: `https://YOUR_USERNAME.github.io/muve-landing-page`
+
+4. **Custom Domain (Optional):**
+   - In GitHub Pages settings, you can add a custom domain
+   - Add a `CNAME` file in the `public` folder with your domain name
+
+### Option 2: Vercel (Recommended for Next.js)
+
+Your project is also configured for Vercel deployment:
 
 **[https://vercel.com/healthtransparent-8894s-projects/v0-muve-landing-page](https://vercel.com/healthtransparent-8894s-projects/v0-muve-landing-page)**
+
+To deploy on Vercel:
+1. Go to [vercel.com](https://vercel.com)
+2. Import your GitHub repository
+3. Vercel will automatically detect Next.js and deploy
 
 ## Local Development
 

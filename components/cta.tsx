@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react"
-
 export default function CTA() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/40 via-secondary/40 to-accent/40 border border-primary/30">
@@ -8,19 +6,14 @@ export default function CTA() {
           Ready to Transform Your Training?
         </h2>
         <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Join thousands of athletes using MUVE to reach their strength goals faster and smarter.
+          Launching soon at your nearest gym or bring MUVE home. The choice is yours — experience intelligent strength training wherever you train best.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-foreground text-background px-8 py-4 rounded-full font-semibold hover:shadow-lg transition flex items-center justify-center gap-2 shadow-md">
-            Start Your Free Trial <ArrowRight size={20} />
-          </button>
-          <button className="bg-white/80 border-2 border-foreground/20 text-foreground px-8 py-4 rounded-full font-semibold hover:bg-white transition backdrop-blur-sm">
-            Schedule Demo
-          </button>
+        <div className="flex justify-center">
+          <div className="inline-block bg-foreground/10 border-2 border-foreground/20 text-foreground px-12 py-4 rounded-full font-semibold text-lg">
+            Launching Soon
+          </div>
         </div>
-
-        <p className="text-muted-foreground text-sm mt-8">No credit card needed. Get instant access to all features.</p>
       </div>
     </section>
   )

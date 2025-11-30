@@ -11,11 +11,12 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-primary/20 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary via-secondary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-foreground font-bold text-sm">M</span>
-            </div>
-            <span className="font-bold text-lg text-foreground">MUVE</span>
+          <div className="flex items-center">
+            <img
+              src="/images/muve_logo_blacck.png"
+              alt="MUVE by One Health Balance"
+              className="h-12 w-auto"
+            />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -41,7 +42,7 @@ export default function Navbar() {
               Pricing
             </Link>
             <button className="bg-gradient-to-r from-primary to-secondary text-foreground px-6 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition shadow-md">
-              Get Started
+              Join Waitlist
             </button>
           </div>
 
@@ -65,7 +66,7 @@ export default function Navbar() {
               Pricing
             </Link>
             <button className="w-full mt-4 bg-gradient-to-r from-primary to-secondary text-foreground px-6 py-2 rounded-full text-sm font-medium">
-              Get Started
+              Join Waitlist
             </button>
           </div>
         )}

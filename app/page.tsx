@@ -3,7 +3,7 @@ import Hero from "@/components/hero"
 import HowItWorks from "@/components/how-it-works"
 import Features from "@/components/features"
 import AITracking from "@/components/ai-tracking"
-import Benefits from "@/components/benefits"
+// import Benefits from "@/components/benefits"
 import Pricing from "@/components/pricing"
 import CTA from "@/components/cta"
 import Footer from "@/components/footer"
@@ -16,7 +16,7 @@ export default function Home() {
       <HowItWorks />
       <Features />
       <AITracking />
-      <Benefits />
+      {/* <Benefits /> */}
       <Pricing />
       <CTA />
       <Footer />

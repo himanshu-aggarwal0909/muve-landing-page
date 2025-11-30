@@ -3,12 +3,17 @@ export default function AITracking() {
     <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-primary/10 to-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-gradient-to-br from-accent/30 to-secondary/20 rounded-3xl p-8 shadow-lg border border-accent/30 order-2 lg:order-1">
-            <img
-              src="/images/gemini-generated-image-72dbpn72dbpn72db.png"
-              alt="Smart Sensors"
-              className="w-full h-auto rounded-2xl scale-110 object-cover bg-card"
-            />
+          <div className="order-2 lg:order-1">
+            <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-primary/20">
+              <div className="overflow-hidden" style={{ maxHeight: '98%' }}>
+                <img
+                  src="/images/Gemini_Generated_Image_8r53s08r53s08r53.png"
+                  alt="Smart Sensors"
+                  className="w-full h-auto object-cover"
+                  style={{ objectPosition: 'center top', transform: 'scale(1.05)', transformOrigin: 'center top' }}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="order-1 lg:order-2">
@@ -23,18 +28,35 @@ export default function AITracking() {
               optimize workouts
             </p>
 
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-5 mb-8">
               {[
-                "Force - Measure strength output",
-                "Balance Level - Track stability",
-                "Velocity & Power - Measure speed and power",
-                "Performance Analytics - Comprehensive insights",
+                {
+                  title: "Provides Optimal Workout Score",
+                  subtitle: null,
+                },
+                {
+                  title: "Time under tension",
+                  subtitle: "Total muscle work time",
+                },
+                {
+                  title: "Velocity",
+                  subtitle: "Measure each rep and set for optimal velocity",
+                },
+                {
+                  title: "Performance analytics",
+                  subtitle: "Comprehensive insights",
+                },
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <div className="w-6 h-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-xs font-bold">✓</span>
+                    <span className="text-white text-xs font-bold">→</span>
                   </div>
-                  <span className="text-foreground font-medium">{item}</span>
+                  <div className="flex-1">
+                    <div className="text-foreground font-semibold text-lg">{item.title}</div>
+                    {item.subtitle && (
+                      <div className="text-muted-foreground text-sm mt-1">{item.subtitle}</div>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>

@@ -12,20 +12,22 @@ export default function Hero() {
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight text-balance">
           Intelligent Fitness,{" "}
-          <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-primary via-secondary via-accent via-secondary to-primary bg-clip-text text-transparent" style={{ filter: 'brightness(0.88)' }}>
             Smarter Workouts
           </span>
           <br />
           <span className="text-primary">Stronger You</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed text-balance">
-          {"Experience AI-powered personalized workouts with real-time form analysis. \nSmart sensors track every rep, and our intelligent app adapts to your unique strength training goals."}
+        <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+          AI-powered personalized workouts with real-time performance analysis.
+          <br />
+          Smart sensors track every rep, adapting to your unique strength goals.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <button className="bg-gradient-to-r from-primary to-secondary text-foreground px-8 py-4 rounded-full font-semibold hover:shadow-lg transition shadow-md flex items-center justify-center gap-2">
-            Start Free Trial <ArrowRight size={20} />
+            Move with Muve <ArrowRight size={20} />
           </button>
           
         </div>

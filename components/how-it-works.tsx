@@ -22,6 +22,13 @@ export default function HowItWorks() {
     },
   ]
 
+  const bgColors = [
+    "from-primary/20 to-primary/5",
+    "from-secondary/20 to-secondary/5",
+    "from-accent/20 to-accent/5",
+    "from-muted/20 to-muted/5",
+  ]
+
   return (
     <section id="howItWorks" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -34,16 +41,13 @@ export default function HowItWorks() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl border border-primary/20 shadow-sm hover:shadow-md transition"
+              className={`bg-gradient-to-br ${bgColors[idx % bgColors.length]} p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-md transition`}
             >
-              <div className="mb-4 rounded-xl overflow-hidden h-40 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <span className="text-6xl font-bold text-primary/40">{step.number}</span>
+              <div className="mb-6 rounded-xl overflow-hidden h-24 bg-gradient-to-br from-white/50 to-transparent flex items-center justify-center">
+                <span className="text-5xl font-bold text-foreground/30">{step.number}</span>
               </div>
-              <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text mb-3">
-                {step.number}
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">{step.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
+              <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 leading-tight">{step.title}</h3>
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed font-medium">{step.description}</p>
             </div>
           ))}
         </div>
