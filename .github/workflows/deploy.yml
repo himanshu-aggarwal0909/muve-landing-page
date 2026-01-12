@@ -39,6 +39,14 @@ jobs:
       - name: Build Next.js
         run: pnpm build
 
+      - name: Verify CNAME in build output
+        run: |
+          if [ ! -f out/CNAME ]; then
+            echo "CNAME not found in out directory, copying from public/"
+            cp public/CNAME out/CNAME
+          fi
+          cat out/CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
