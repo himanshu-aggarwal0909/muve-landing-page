@@ -8,8 +8,7 @@ const nextConfig = {
   },
   // Enable static export for GitHub Pages
   output: 'export',
-  // Set base path for GitHub Pages subdirectory
-  basePath: '/muve-landing-page',
+  // No basePath needed for custom domain (muve.onehealthbalance.com)
   trailingSlash: true,
 }
 
